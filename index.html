@@ -8,6 +8,10 @@
     <meta name="description"
         content="زراعة شعر باحدث تقنيات FUE SAFIR بنتائج طبيعية وضمان مدى الحياة. في تركيا والأردن.">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Cairo Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -31,17 +35,25 @@
             <!-- 2. القائمة والأزرار (الآن على اليسار RTL) -->
             <!-- هذا العنصر سيتم إخفاؤه/إظهاره بواسطة JavaScript -->
             <div class="header-nav-wrapper">
+
+                <!-- زر الإغلاق (X) الجديد -->
+                <!-- <button class="menu-close" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button> -->
+
                 <nav class="header-nav">
                     <ul>
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="#procedures">التقنيات والإجراءات</a></li>
-                        <li><a href="#gallery">معرض النتائج</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#contact">تواصل معنا</a></li>
+                        <!-- داخل <ul> في الهيدر -->
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#treatments">العلاجات</a></li> <!-- رابط جديد -->
+                        <li><a href="#procedures">تقنيات الزراعة</a></li>
+                        <li><a href="#gallery">النتائج</a></li>
+                        <li><a href="#patient-guide">دليل المريض</a></li> <!-- رابط جديد -->
+                        <!-- ... باقي الروابط -->
                     </ul>
                 </nav>
 
-                <a href="contact.html" class="cta-btn consultation-btn">استشارة مجانية</a>
+                <a href="#contact" class="cta-btn consultation-btn">استشارة مجانية</a>
             </div>
 
         </div>
@@ -58,8 +70,8 @@
                         بأفضل المعايير العالمية في تركيا والأردن، مع ضمان شامل على النتائج.</p>
                     <div class="cta-group animate-on-load" style="animation-delay: 0.7s;">
                         <a href="gallery.html" class="cta-btn consultation-btn"
-                            style="margin-right: 20px;font-size: 20px;">شاهد النتائج</a>
-                        <a href="tel:+905541682406" class="cta-btn consultation-btn" style="font-size: 20px;">احجز
+                            style="margin-right: 20px;">شاهد النتائج</a>
+                        <a href="tel:+905541682406" class="cta-btn consultation-btn" >احجز
                             استشارتك الآن</a>
                     </div>
                 </div>
@@ -249,7 +261,7 @@
                         <h3>رأي مريضنا من العراق</h3>
                     </div>
 
-                        <div class="video-card scroll-animate" data-delay="0.7s">
+                    <div class="video-card scroll-animate" data-delay="0.7s">
                         <div class="video-responsive-wrapper">
                             <!-- استبدل الرابط أدناه برابط الفيديو الثالث -->
                             <iframe src="https://www.youtube.com/embed/r7nRqDffmTY" title="Video 3" frameborder="0"
@@ -305,6 +317,183 @@
                 <a href="gallery.html" class="cta-btn" style="font-size: 20px;">شاهد المزيد من النتائج الناجحة</a>
             </div>
         </section>
+        <!-- --- Medical Info / Infographics Section --- -->
+        <section class="section-padding" id="info-gallery" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title scroll-animate">معلومات طبية وعروض حصرية</h2>
+
+                <div class="info-grid">
+
+                    <!-- صورة 1: البلازما PRP -->
+                    <div class="info-card scroll-animate" data-delay="0.2s">
+                        <img src="images/3.png" alt="علاج البلازما للشعر">
+                    </div>
+
+                    <!-- صورة 2: شكل الفروة بعد 10 أيام -->
+                    <div class="info-card scroll-animate" data-delay="0.4s">
+                        <img src="images/6.png" alt="مراحل الشفاء بعد الزراعة">
+                    </div>
+
+                    <!-- صورة 3: الحلم والحقيقة -->
+                    <div class="info-card scroll-animate" data-delay="0.6s">
+                        <img src="images/8.png" alt="تحقيق حلم الزراعة">
+                    </div>
+                    <div class="info-card scroll-animate" data-delay="0.6s">
+                        <img src="images/14.png" alt="تحقيق حلم الزراعة">
+                    </div>
+                    <div class="info-card scroll-animate" data-delay="0.6s">
+                        <img src="images/1.png" alt="تحقيق حلم الزراعة">
+                    </div>
+                    <div class="info-card scroll-animate" data-delay="0.6s">
+                        <img src="images/2.png" alt="تحقيق حلم الزراعة">
+                    </div>
+                    <div class="info-card scroll-animate" data-delay="0.6s">
+                        <img src="images/4.png" alt="تحقيق حلم الزراعة">
+                    </div>
+                    <div class="info-card scroll-animate" data-delay="0.6s">
+                        <img src="images/5.png" alt="تحقيق حلم الزراعة">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- --- Non-Surgical Treatments Section (العلاجات غير الجراحية) --- -->
+        <section class="section-padding" id="treatments" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title scroll-animate">حلول وعلاجات الشعر المتقدمة</h2>
+                <p style="text-align: center; margin-bottom: 40px; color: #666;" class="scroll-animate">
+                    نقدم في Magda Clinics أحدث التقنيات العلاجية غير الجراحية لتقوية الشعر وزيادة كثافته
+                </p>
+
+                <div class="treatments-grid">
+
+                    <!-- 1. علاج البلازما PRP -->
+                    <div class="treatment-card scroll-animate" data-delay="0.2s">
+                        <div class="icon-wrapper"><i class="fas fa-tint"></i></div> <!-- أيقونة قطرة -->
+                        <h3>علاج البلازما (PRP)</h3>
+                        <h4>الحل الطبيعي لتقوية البصيلات</h4>
+                        <p>تقنية علاجية تعتمد على استخلاص عوامل النمو من دم المريض وحقنها في فروة الرأس لتحفيز البصيلات
+                            وتجديد الخلايا التالفة.</p>
+                        <ul class="treatment-features">
+                            <li><i class="fas fa-check"></i> يوقف تساقط الشعر</li>
+                            <li><i class="fas fa-check"></i> آمن وطبيعي 100%</li>
+                            <li><i class="fas fa-check"></i> جلسات سريعة بدون ألم</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. الميزوثيرابي (Mesotherapy) -->
+                    <div class="treatment-card scroll-animate" data-delay="0.4s">
+                        <div class="icon-wrapper"><i class="fas fa-syringe"></i></div> <!-- أيقونة حقنة -->
+                        <h3>الميزوثيرابي</h3>
+                        <h4>دعم مباشر للفيتامينات والنمو</h4>
+                        <p>حقن فروة الرأس بمزيج من الفيتامينات والمعادن والأحماض الأمينية لتغذية البصيلات بعمق وتحفيز
+                            الدورة الدموية.</p>
+                        <ul class="treatment-features">
+                            <li><i class="fas fa-check"></i> يعالج التساقط الوراثي والموسمي</li>
+                            <li><i class="fas fa-check"></i> يزيد من سماكة وكثافة الشعر</li>
+                            <li><i class="fas fa-check"></i> نتائج ملحوظة بعد الجلسة الثالثة</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. الخلايا المجهرية (Stem Cells) -->
+                    <div class="treatment-card scroll-animate" data-delay="0.6s">
+                        <div class="icon-wrapper"><i class="fas fa-dna"></i></div> <!-- أيقونة DNA -->
+                        <h3>الخلايا المجهرية / الجذعية</h3>
+                        <h4>الحل التجديدي المتقدم</h4>
+                        <p>تقنية تعتمد على استخلاص خلايا دقيقة من الأنسجة الدهنية للمريض لإعادة بناء وتجديد بصيلات الشعر
+                            التالفة.</p>
+                        <ul class="treatment-features">
+                            <li><i class="fas fa-check"></i> جلسة واحدة تكفي غالباً</li>
+                            <li><i class="fas fa-check"></i> تجديد بيولوجي لفروة الرأس</li>
+                            <li><i class="fas fa-check"></i> مثالية لزيادة كثافة الشعر المزروع</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- --- Patient Guide Section (دليل المريض - Accordion) --- -->
+        <section class="section-padding" id="patient-guide" style="background-color: var(--bg-gray);">
+            <div class="container">
+                <h2 class="section-title scroll-animate">دليل المريض: رحلتك خطوة بخطوة</h2>
+                <p style="text-align: center; margin-bottom: 40px;">كل ما تحتاج معرفته قبل وبعد عملية الزراعة لضمان أفضل
+                    النتائج</p>
+
+                <div class="accordion-wrapper scroll-animate" data-delay="0.3s">
+
+                    <!-- 1. مرحلة ما قبل العملية -->
+                    <details class="guide-item">
+                        <summary>
+                            <span class="guide-title"><i class="fas fa-hourglass-start"></i> 1. نصائح مهمة قبل يوم
+                                العملية</span>
+                            <i class="fas fa-chevron-down arrow"></i>
+                        </summary>
+                        <div class="guide-content">
+                            <ul>
+                                <li>توقف عن التدخين وتناول الأسبرين ومسيلات الدم قبل العملية بـ 7 أيام.</li>
+                                <li>ابتعد عن الكافيين والشاي الأخضر والمشروبات الكحولية قبل 3 أيام.</li>
+                                <li>احصل على قسط كافٍ من الراحة والنوم الجيد ليلة العملية.</li>
+                                <li>في يوم العملية: تناول فطوراً صحياً خفيفاً، وارتدِ قميصاً بأزرار لسهولة الخلع.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- 2. يوم العملية -->
+                    <details class="guide-item">
+                        <summary>
+                            <span class="guide-title"><i class="fas fa-procedures"></i> 2. يوم إجراء العملية</span>
+                            <i class="fas fa-chevron-down arrow"></i>
+                        </summary>
+                        <div class="guide-content">
+                            <ul>
+                                <li>سيتم استقبالك في العيادة وإجراء تقييم سريع قبل البدء.</li>
+                                <li>يتم التقاط صور طبية وتحديد خط الشعر الجديد حسب رغبتك.</li>
+                                <li>تتم العملية تحت تخدير موضعي (بدون ألم) وتستغرق عدة ساعات.</li>
+                                <li>بعد الانتهاء، ستحصل على حقيبة الأدوية والتعليمات اللازمة.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- 3. تعليمات ما بعد العملية (الأيام الأولى) -->
+                    <details class="guide-item">
+                        <summary>
+                            <span class="guide-title"><i class="fas fa-band-aid"></i> 3. تعليمات ما بعد العملية (أول 4
+                                أيام)</span>
+                            <i class="fas fa-chevron-down arrow"></i>
+                        </summary>
+                        <div class="guide-content">
+                            <ul>
+                                <li>استخدم البخاخ الملحي بانتظام لترطيب المنطقة المزروعة.</li>
+                                <li>النوم بوضعية مائلة (زاوية 45 درجة) لتفادي التورم.</li>
+                                <li>تجنب لمس المناطق المزروعة أو حكها نهائياً.</li>
+                                <li>الحصول على قسط وافر من الراحة وتجنب النشاط البدني.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- 4. الغسيل والعناية -->
+                    <details class="guide-item">
+                        <summary>
+                            <span class="guide-title"><i class="fas fa-shower"></i> 4. طريقة غسل الشعر والتعافي</span>
+                            <i class="fas fa-chevron-down arrow"></i>
+                        </summary>
+                        <div class="guide-content">
+                            <ul>
+                                <li><strong>من اليوم 3:</strong> يبدأ غسل المنطقة المانحة فقط.</li>
+                                <li><strong>من اليوم 10:</strong> تبدأ القشور بالتساقط وتزول تدريجياً.</li>
+                                <li><strong>الشهر الأول:</strong> يسقط الشعر المزروع (صدمة التساقط) وهذا طبيعي جداً.
+                                </li>
+                                <li><strong>من الشهر 3 إلى 6:</strong> يبدأ الشعر الجديد بالنمو وتظهر النتائج تدريجياً.
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
         <!-- --- Contact Us Section --- -->
         <section class="contact-section" id="contact">
             <div class="container">
@@ -389,6 +578,7 @@
                 </div>
             </div>
         </section>
+
         <footer>
             <div class="container footer-grid">
                 <!-- 1. Contact Information -->

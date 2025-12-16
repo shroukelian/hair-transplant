@@ -10,13 +10,15 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    /* تغيير الخط لـ Cairo وتكبير الخط الأساسي */
+    font-family: 'Cairo', sans-serif !important; 
+    font-size: 18px; /* كان 16px سابقاً، الآن أصبح أكبر */
     background-color: var(--bg-light);
     color: var(--text-dark);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.8; /* زيادة المسافة بين السطور للقراءة المريحة */
 }
 /* عندما تكون القائمة مفتوحة على الموبايل، نمنع التمرير */
 body.menu-active {
@@ -1171,3 +1173,179 @@ footer p {
         order: -1; /* (اختياري) إذا كنت تريد الفورم يظهر فوق المعلومات في الموبايل */
     }
 }
+/* تنسيق قسم الصور التثقيفية */
+.info-grid {
+    display: grid;
+    /* عرض الصور بجانب بعض، وبحد أدنى للعرض لضمان عدم صغر الصورة جداً */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.info-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background: #fff;
+}
+
+.info-card:hover {
+    transform: translateY(-10px); /* حركة رفع عند المرور */
+}
+
+.info-card img {
+    width: 100%;
+    height: auto; /* مهم جداً: يجعل الصورة بطولها الطبيعي لتقرأ الكلام */
+    display: block;
+}
+
+/* --- Treatments Grid Styles --- */
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.treatment-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--brand-purple);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.treatment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.treatment-card .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: #f3eef8;
+    color: var(--brand-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    margin: 0 auto 20px auto;
+}
+
+.treatment-card h3 {
+    color: var(--brand-purple);
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.treatment-card h4 {
+    color: var(--accent-gold);
+    font-size: 1em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.treatment-card p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.treatment-features {
+    list-style: none;
+    padding: 0;
+    text-align: right; /* المحاذاة لليمين للقوائم */
+}
+
+.treatment-features li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.treatment-features li i {
+    color: #25d366; /* لون علامة الصح أخضر */
+    margin-left: 10px;
+}
+
+/* --- Patient Guide Accordion Styles --- */
+.accordion-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.guide-item {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.guide-item summary {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: var(--brand-purple);
+    list-style: none; /* إخفاء السهم الافتراضي */
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.guide-item summary:hover {
+    background-color: #fcfcfc;
+}
+
+.guide-item summary::-webkit-details-marker {
+    display: none; /* إخفاء السهم في متصفحات كروم */
+}
+
+.guide-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+.guide-title i {
+    color: var(--accent-gold);
+    font-size: 1.2em;
+}
+
+.guide-item[open] summary .arrow {
+    transform: rotate(180deg); /* تدوير السهم عند الفتح */
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.guide-content {
+    padding: 0 20px 20px 20px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    color: #555;
+    line-height: 1.7;
+}
+
+.guide-content ul {
+    padding-right: 20px;
+}
+
+.guide-content li {
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
