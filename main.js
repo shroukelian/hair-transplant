@@ -1,46 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===================================
-    // 1. منطق قائمة الهامبرغر (Mobile Menu)
-    // ===================================
-    const menuToggle = document.querySelector('.menu-toggle'); // زر الهامبرغر
-    const menuClose = document.querySelector('.menu-close');   // زر الإغلاق الجديد (X)
+    const menuToggle = document.querySelector('.menu-toggle'); 
+    const menuClose = document.querySelector('.menu-close');  
     const headerNavWrapper = document.querySelector('.header-nav-wrapper');
     const body = document.body;
     
-    // وظيفة فتح القائمة
     function openMenu() {
         headerNavWrapper.classList.add('active');
         body.classList.add('menu-active');
     }
 
-    // وظيفة إغلاق القائمة
     function closeMenu() {
         headerNavWrapper.classList.remove('active');
         body.classList.remove('menu-active');
     }
     
-    // ربط زر الهامبرغر بالفتح
     if (menuToggle) {
         menuToggle.addEventListener('click', openMenu);
     }
     
-    // ربط زر الإغلاق بالوظيفة
     if (menuClose) {
         menuClose.addEventListener('click', closeMenu);
     }
     
-    // إغلاق القائمة عند النقر على أي رابط داخلها 
     if (headerNavWrapper) {
         headerNavWrapper.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
     }
 
-    // ===================================
-    // 2. منطق حركة الظهور عند التمرير (Scroll Reveal)
-    // ===================================
-    // ... (هذا القسم يظل كما هو) ...
     const animatedElements = document.querySelectorAll('.scroll-animate');
     
     animatedElements.forEach(element => {

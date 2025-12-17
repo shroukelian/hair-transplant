@@ -1,26 +1,24 @@
 /* General & Typography */
 :root {
-    --brand-purple: #5A2C7B;     /* الأرجواني الأساسي */
-    --accent-gold: #D3B8E8;      /* لمسة فاتحة للأزرار/البروز */
-    --text-dark: #333333;        /* لون النص الداكن */
-    --text-light: #F5F5F5;       /* لون النص الفاتح */
-    --bg-light: #FFFFFF;         /* الخلفية البيضاء النقية */
-    --bg-gray: #f9f9f9;          /* خلفية رمادية فاتحة */
-    --cta-color: var(--text-light); /* لون النص على الزر (أبيض) */
+    --brand-purple: #5A2C7B;    
+    --accent-gold: #D3B8E8;      
+    --text-dark: #333333;       
+    --text-light: #F5F5F5;      
+    --bg-light: #FFFFFF;        
+    --bg-gray: #f9f9f9;          
+    --cta-color: var(--text-light);
 }
 
 body {
-    /* تغيير الخط لـ Cairo وتكبير الخط الأساسي */
     font-family: 'Cairo', sans-serif !important; 
-    font-size: 18px; /* كان 16px سابقاً، الآن أصبح أكبر */
+    font-size: 18px; 
     background-color: var(--bg-light);
     color: var(--text-dark);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    line-height: 1.8; /* زيادة المسافة بين السطور للقراءة المريحة */
+    line-height: 1.8; 
 }
-/* عندما تكون القائمة مفتوحة على الموبايل، نمنع التمرير */
 body.menu-active {
     overflow: hidden;
 }
@@ -37,20 +35,17 @@ a{
 /*         ANIMATION KEYFRAMES            */
 /* ====================================== */
 
-/* 1. حركة نبض لزر الاستشارة (في الهيدر) */
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(90, 44, 123, 0.7); }
     70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(90, 44, 123, 0); }
     100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(90, 44, 123, 0); }
 }
 
-/* 2. حركة ظهور للأعلى (تستخدم في الـ Hero) */
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(50px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 3. حركة اهتزاز لزر الواتساب */
 @keyframes subtle-bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0) scale(1);
@@ -68,13 +63,12 @@ a{
 /*         LOAD ANIMATION CLASSES         */
 /* ====================================== */
 
-/* الكلاس الذي يتم تطبيقه على عناصر الـ Hero عند تحميل الصفحة */
 .animate-on-load {
-    opacity: 0; /* يبدأ مخفياً */
+    opacity: 0; 
     animation-name: fadeInUp;
-    animation-duration: 1s; /* مدة الحركة */
+    animation-duration: 1s; 
     animation-timing-function: ease-out;
-    animation-fill-mode: forwards; /* يحافظ على الحالة النهائية */
+    animation-fill-mode: forwards; 
 }
 
 
@@ -82,15 +76,13 @@ a{
 /*        SCROLL ANIMATION CLASSES        */
 /* ====================================== */
 
-/* الكلاس الذي سيتم إضافته بواسطة JS لإخفاء العنصر قبل الحركة */
 .hidden-scroll {
     opacity: 0;
     filter: blur(5px);
-    transform: translateY(30px); /* يبدأ من الأسفل قليلاً */
+    transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out;
 }
 
-/* الكلاس الذي سيتم إضافته بواسطة JS لتشغيل الحركة */
 .show {
     opacity: 1 !important;
     filter: blur(0) !important;
@@ -98,7 +90,6 @@ a{
 }
 
 
-/* 1. تنسيق الهيدر والحاوية الرئيسية (Floating) */
 header {
     background-color: transparent !important; 
     padding: 0; 
@@ -108,7 +99,6 @@ header {
     z-index: 1000;
 }
 
-/* 2. الحاوية العائمة (التي تحمل اللوجو والقائمة) */
 .header-wrapper {
     max-width: 1200px;
     margin: 20px auto 0 auto; 
@@ -121,7 +111,6 @@ header {
     align-items: center;
 }
 
-/* 3. عناصر الهيدر الداخلية */
 header .container {
     display: block !important; 
     padding: 0 !important;
@@ -152,7 +141,6 @@ header .container {
     white-space: nowrap;
 }
 
-/* 5. منطقة القائمة والأزرار (على اليسار - RTL) */
 .header-nav-wrapper {
     order: 2; 
     gap: 20px;
@@ -185,7 +173,6 @@ header .container {
 }
 
 
-/* 6. زر CTA (استشارة مجانية) */
 .consultation-btn {
     background-color: var(--brand-purple);
     color: var(--cta-color);
@@ -224,7 +211,6 @@ header .container {
     transform: translateY(-3px);
 }
 
-/* تنسيق زر الهامبرغر (مخفي في الديسكتوب) */
 .menu-toggle {
     display: none;
     background: none;
@@ -236,7 +222,7 @@ header .container {
     transition: transform 0.3s ease;
 }
 .menu-toggle i {
-    pointer-events: none; /* لتجنب مشاكل النقر */
+    pointer-events: none; 
 }
 
 
@@ -335,31 +321,29 @@ header .container {
     object-fit: cover; 
 }
 
-/* عمود النص - التعديلات على الخطوط هنا */
 .about-content-column {
     flex: 1.8; 
     padding-left: 0; 
     padding-right: 0;
 }
 .about-content-column h2 {
-    font-size: 2.8em; /* **زيادة حجم العنوان** */
+    font-size: 2.8em; 
     color: var(--brand-purple);
-    margin-bottom: 25px; /* زيادة المسافة */
-    font-weight: 900; /* **جعله أكثر سمكاً** */
+    margin-bottom: 25px;
+    font-weight: 900; 
     line-height: 1.2;
 }
 
 .about-content-column p {
-    margin-bottom: 20px; /* زيادة المسافة بين الفقرات */
+    margin-bottom: 20px; 
     color: var(--text-dark);
-    font-size: 1.1em; /* **زيادة حجم الخط** */
-    line-height: 1.8; /* **زيادة مسافة الأسطر** */
-    font-weight: 500; /* جعل النص أغمق قليلاً */
+    font-size: 1.1em; 
+    line-height: 1.8; 
+    font-weight: 500;
 }
-/* تمييز النص البارز داخل الفقرة */
 .about-content-column p strong {
     font-weight: 700;
-    color: var(--brand-purple); /* يمكن تمييزه بلون العلامة التجارية */
+    color: var(--brand-purple); 
 }
 /* --- Why ATC Section Styles --- */
 .why-grid {
@@ -438,27 +422,25 @@ header .container {
 
 /* --- Contact & Footer --- */
 footer {
-    background-color: var(--text-dark); /* خلفية داكنة */
-    color: var(--bg-light); /* نص فاتح */
-    padding: 60px 0 30px 0; /* زيادة البادينج العلوي والسفلي */
+    background-color: var(--text-dark); 
+    color: var(--bg-light);
+    padding: 60px 0 30px 0; 
     margin-top: 80px;
-    font-size: 1em; /* زيادة حجم الخط الأساسي */
+    font-size: 1em; 
 }
 
-/* تحسين تنسيق شبكة الفوتر */
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px; /* زيادة المسافة بين الأعمدة */
+    gap: 50px; 
 }
 
-/* تنسيق العناوين داخل الفوتر */
 footer h3 {
-    color: var(--accent-gold); /* لون ذهبي للعناوين لتمييزها */
-    font-size: 1.5em; /* تكبير العنوان */
-    margin-bottom: 25px; /* زيادة المسافة بعد العنوان */
-    font-weight: 800; /* خط سميك */
-    border-bottom: 3px solid rgba(211, 184, 232, 0.2); /* خط فاصل أكثر وضوحاً */
+    color: var(--accent-gold); 
+    font-size: 1.5em;
+    margin-bottom: 25px; 
+    font-weight: 800;
+    border-bottom: 3px solid rgba(211, 184, 232, 0.2);
     padding-bottom: 10px;
 }
 
@@ -466,14 +448,14 @@ footer h3 {
 .contact-info p {
     display: flex;
     align-items: center;
-    gap: 15px; /* زيادة المسافة بين الأيقونة والنص */
-    margin-bottom: 15px; /* زيادة المسافة بين سطور التواصل */
+    gap: 15px; 
+    margin-bottom: 15px;
     line-height: 1.5;
 }
 .contact-info i {
     color: var(--accent-gold);
-    font-size: 1.3em; /* تكبير الأيقونات */
-    min-width: 25px; /* لضمان محاذاة النص */
+    font-size: 1.3em; 
+    min-width: 25px; 
     text-align: center;
 }
 .contact-info a {
@@ -484,11 +466,10 @@ footer h3 {
 .contact-info a:hover {
     color: var(--brand-purple); 
 }
-/* تمييز أرقام الهواتف */
 .contact-info p:nth-child(2),
 .contact-info p:nth-child(3) {
-    font-weight: bold; /* جعل أرقام الهواتف أكثر سمكاً */
-    font-size: 1.1em; /* تكبير أرقام الهواتف قليلاً */
+    font-weight: bold; 
+    font-size: 1.1em; 
 }
 
 
@@ -509,11 +490,10 @@ footer ul li a {
 }
 footer ul li a:hover {
     color: var(--brand-purple);
-    padding-right: 5px; /* حركة بسيطة عند المرور */
+    padding-right: 5px;
 }
-/* إضافة نقطة أو رمز قبل الروابط السريعة */
 footer ul li:before {
-    content: "\f100"; /* رمز سهم أصغر وواضح - Font Awesome 6 - Angle left */
+    content: "\f100"; 
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: var(--accent-gold);
@@ -526,27 +506,24 @@ footer ul li:before {
 /* 3. Social Media */
 .social-links a {
     color: var(--bg-light);
-    font-size: 2em; /* تكبير أيقونات السوشيال ميديا بشكل واضح */
+    font-size: 2em; 
     margin-right: 25px;
     transition: color 0.3s, transform 0.3s;
 }
 .social-links a:hover {
-    color: #25d366; /* لون الواتساب على أيقونة الواتساب */
+    color: #25d366; 
     transform: scale(1.2);
 }
-/* لون خاص لأيقونة فيسبوك عند المرور */
 .social-links a[aria-label="Facebook"]:hover {
     color: #1877f2; 
 }
-/* لون خاص لأيقونة إنستغرام عند المرور */
 .social-links a[aria-label="Instagram"]:hover {
     color: #e4405f; 
 }
 
-/* تنسيق حقوق النشر */
 footer p {
     text-align: center;
-    font-size: 0.9em; /* زيادة حجم خط حقوق النشر */
+    font-size: 0.9em;
     margin-top: 40px; 
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -588,16 +565,14 @@ footer p {
     height: 450px; 
 }
 
-/* **تنسيق عنصر iframe الجديد ليحل محل وسم <video>** */
 .video-column .embedded-video {
-    position: absolute; /* ليغطي المساحة بالكامل */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: block;
 }
-/* تنسيق عمود الصورة */
 .video-column {
     flex: 1; 
     min-width: 300px;
@@ -605,41 +580,37 @@ footer p {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    height: 450px; /* الارتفاع ثابت */
+    height: 450px;
 }
 
-/* تنسيق الصورة نفسها - التعديل هنا مهم جداً */
 .about-image {
     width: 100%;
-    height: 100%;       /* تعديل: لتأخذ ارتفاع العمود بالكامل */
-    object-fit: cover;  /* تعديل: لقص الصورة بشكل متناسق دون مط */
+    height: 100%;       
+    object-fit: cover;  
     transition: transform 0.8s ease;
-    transform: scale(1); /* تعديل: الحجم الطبيعي */
-    opacity: 1;         /* تعديل هام: جعلناها ظاهرة 1 بدلاً من 0 */
+    transform: scale(1); 
+    opacity: 1;         
     display: block;
 }
 
-/* إذا كنت لا تزال تستخدم أنيميشن عند السكرول، هذا الكود يبقيها متفاعلة */
 .scroll-animate.active .about-image {
-    transform: scale(1.05); /* حركة تكبير بسيطة عند الظهور */
+    transform: scale(1.05); 
 }
 
-/* تعديل للموبايل لضمان الترتيب الصحيح (صورة فوق، نص تحت) */
 @media (max-width: 768px) {
     .about-video-grid {
-        flex-direction: column; /* الصورة ستبقى في الأعلى لأننا وضعناها أولاً في HTML */
+        flex-direction: column;
         gap: 30px;
     }
     
     .video-column {
-        height: 250px; /* تقليل الارتفاع قليلاً للموبايل */
+        height: 250px; 
         width: 100%;
     }
 }
-/* تعريف الأنيميشن */
 @keyframes slowZoom {
     0% { transform: scale(1); }
-    50% { transform: scale(1.08); } /* تكبير بسيط */
+    50% { transform: scale(1.08); } 
     100% { transform: scale(1); }
 }
 
@@ -649,7 +620,7 @@ footer p {
     height: 450px;
     position: relative;
     border-radius: 10px;
-    overflow: hidden; /* ضروري جداً */
+    overflow: hidden; 
 }
 
 .about-image {
@@ -657,14 +628,13 @@ footer p {
     height: 100%;
     object-fit: cover;
     
-    /* تشغيل الأنيميشن */
-    animation: slowZoom 10s infinite ease-in-out; /* مدة طويلة لحركة هادئة */
+    animation: slowZoom 10s infinite ease-in-out;
 }
 @media (max-width: 768px) {
     
     /* 1. General */
     .container {
-        padding: 0 15px; /* تقليل البادينج الجانبي */
+        padding: 0 15px; 
     }
     .section-title {
         font-size: 1.8em;
@@ -674,7 +644,7 @@ footer p {
     
     /* 2. Header / Navigation */
     .header-wrapper {
-        position: relative; /* لتحديد موقع زر الهامبرغر */
+        position: relative;
         padding: 10px 15px;
         margin: 10px auto 0 auto;
         border-radius: 5px;
@@ -686,41 +656,35 @@ footer p {
         font-size: 1em;
     }
     
-    /* إظهار زر القائمة وإخفاء القائمة الأصلية */
     .menu-toggle {
         display: block;
-        order: 3; /* جعله في الطرف الأيسر */
+        order: 3; 
     }
     
-    /* تنسيق زر الإغلاق داخل القائمة المفتوحة */
     .menu-close {
-        display: block; /* إظهاره داخل القائمة المفتوحة */
+        display: block; 
     }
     
     .header-nav-wrapper {
-        /* إخفاء القائمة الأصلية في وضع الموبايل */
         display: none; 
     }
     
-    /* عند تفعيل كلاس 'active' في JS */
     .header-nav-wrapper.active {
         display: flex; 
         position: fixed;
         top: 0;
         right: 0;
-        /* **تعديل عرض القائمة ليكون نصف الشاشة (65%)** */
         width: 65%; 
         height: 100vh;
-        background-color: var(--bg-light); /* خلفية بيضاء ثابتة */
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); /* ظل جانبي لإبرازها */
+        background-color: var(--bg-light);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); 
         flex-direction: column; 
         justify-content: flex-start;
-        padding-top: 80px; /* مسافة من الأعلى للابتعاد عن زر الإغلاق */
+        padding-top: 80px; 
         transition: transform 0.4s ease-in-out; 
         transform: translateX(0%); 
         z-index: 999;
     }
-    /* تعديل حركة فتح القائمة لتبدو كشاشة جانبية */
     .header-nav-wrapper {
         transform: translateX(100%);
     }
@@ -728,7 +692,6 @@ footer p {
         transform: translateX(0);
     }
     
-    /* إضافة خلفية عاتمة عند فتح القائمة */
     body.menu-active:before {
         content: '';
         position: fixed;
@@ -736,8 +699,8 @@ footer p {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* عتامة رمادية */
-        z-index: 998; /* أسفل القائمة وفوق محتوى الصفحة */
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998; 
     }
 
 
@@ -761,22 +724,18 @@ footer p {
         font-size: 1.1em;
     }
     
-    /* تعديل زر CTA في القائمة المفتوحة */
     .header-nav-wrapper .cta-btn {
         margin-top: 30px;
         width: 80%;
         text-align: center;
     }
     
-    /* إخفاء القائمة في وضع الديسكتوب واستخدام التنسيق المرئي لها */
     .header-nav-wrapper:not(.active) {
-        /* إخفاء القائمة تماماً في حالة عدم تفعيلها على شاشة صغيرة */
         display: none; 
     }
-    /* إظهارها في شاشة كبيرة (لإلغاء الإخفاء أعلاه) */
     @media (min-width: 769px) {
         .header-nav-wrapper {
-            display: flex !important; /* لضمان ظهور القائمة على الديسكتوب */
+            display: flex !important; 
             position: static;
             height: auto;
             background-color: transparent;
@@ -786,13 +745,12 @@ footer p {
     }
 
 
-    /* 3. Hero Section */
     .hero-content h2 {
         font-size: 2em; 
         margin-bottom: 15px;
     }
     .cta-group {
-        flex-direction: column; /* الأزرار عمودية */
+        flex-direction: column;
         gap: 15px;
     }
     .cta-group a {
@@ -803,7 +761,7 @@ footer p {
     
     /* 4. Trust Bar */
     .trust-bar-grid {
-        grid-template-columns: 1fr; /* عمود واحد */
+        grid-template-columns: 1fr; 
         gap: 15px;
         padding: 30px 10px;
     }
@@ -813,82 +771,78 @@ footer p {
 
     /* 5. About Video Section */
     .about-video-grid {
-        flex-direction: column-reverse; /* وضع الفيديو أولاً في الأعلى */
+        flex-direction: column-reverse; 
         gap: 30px;
     }
     .video-column {
         min-width: 100%;
-        /* **التعديل هنا: ارتفاع الفيديو 220px على الموبايل** */
         height: 220px; 
     }
     .about-content-column h2 {
-        font-size: 1.9em; /* تصغير العنوان ليتناسب مع الموبايل */
+        font-size: 1.9em; 
         margin-bottom: 15px;
     }
     .about-content-column p {
-        font-size: 1em; /* تصغير حجم الخط على الموبايل */
+        font-size: 1em; 
         margin-bottom: 15px;
     }
     .about-content-column .cta-btn.secondary {
-        margin: 0 auto; /* توسيط الزر */
+        margin: 0 auto; 
         display: block;
         width: 80%;
     }
 
     /* 6. Why ATC Grid */
     .why-grid {
-        grid-template-columns: 1fr; /* عمود واحد */
+        grid-template-columns: 1fr; 
     }
 
     /* 7. Results Grid */
     .results-grid {
-        grid-template-columns: repeat(2, 1fr); /* عمودين */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 10px;
     }
     .result-card img {
-        height: 200px; /* تقليل ارتفاع الصورة */
+        height: 200px; 
     }
     
-    /* 8. Footer (تعديلات الموبايل) */
+    /* 8. Footer  */
     footer {
         padding-top: 30px;
         margin-top: 50px;
         font-size: 1em; 
     }
     .footer-grid {
-        grid-template-columns: 1fr; /* عمود واحد */
+        grid-template-columns: 1fr;
         gap: 30px; 
-        text-align: center; /* **التعديل هنا: توسيط كل المحتوى** */
+        text-align: center; 
     }
     footer h3 {
         font-size: 1.4em; 
-        text-align: center; /* **التعديل هنا: توسيط العناوين** */
+        text-align: center; 
         margin-bottom: 15px;
     }
     .contact-info p {
-        /* **التعديل هنا: توسيط عناصر التواصل داخل حاويتها** */
         justify-content: center; 
         gap: 10px;
         font-size: 1em; 
     }
     .social-links {
-        text-align: center; /* **التعديل هنا: توسيط أيقونات السوشيال ميديا** */
+        text-align: center; 
     }
     .social-links a {
         font-size: 1.8em; 
-        margin: 0 10px; /* مسافة متساوية يمين ويسار لتوسيط أفضل */
+        margin: 0 10px; 
     }
 
-    /* الروابط السريعة تحتاج لضبط خاص لأنها قائمة */
     footer ul {
-        width: fit-content; /* جعل القائمة بعرض المحتوى فقط */
-        margin: 0 auto; /* توسيط القائمة في منتصف العمود */
+        width: fit-content; 
+        margin: 0 auto; 
     }
     footer ul li a {
         padding-right: 0;
         display: block; 
     }
-    /* إزالة النقطة/الرمز من روابط الموبايل لتنظيف الشكل */
     footer ul li:before {
         display: none;
     }
@@ -912,7 +866,7 @@ footer p {
 
 .video-gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* شبكة متجاوبة */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
 }
 
@@ -937,10 +891,9 @@ footer p {
     font-weight: 600;
 }
 
-/* كود جعل الفيديو متجاوب (أنت أضفته سابقاً، لكن تأكد من وجوده) */
 .video-responsive-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* نسبة 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     background-color: #000;
@@ -956,12 +909,12 @@ footer p {
 /* --- Process Section Styles --- */
 .process-section {
     padding: 80px 0;
-    background-color: var(--bg-gray); /* خلفية رمادية لتمييز القسم */
+    background-color: var(--bg-gray); 
 }
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 أعمدة بجانب بعض */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     text-align: center;
 }
@@ -999,7 +952,7 @@ footer p {
 
 .step-icon {
     font-size: 2.5em;
-    color: var(--accent-gold); /* يمكن استخدام اللون الأرجواني أيضاً */
+    color: var(--accent-gold); 
     margin-bottom: 20px;
 }
 
@@ -1016,13 +969,13 @@ footer p {
 /* تجاوب قسم الخطوات مع الموبايل */
 @media (max-width: 992px) {
     .process-grid {
-        grid-template-columns: repeat(2, 1fr); /* عمودين في التابلت */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 576px) {
     .process-grid {
-        grid-template-columns: 1fr; /* عمود واحد في الموبايل */
+        grid-template-columns: 1fr; 
         gap: 30px;
     }
 }
@@ -1032,17 +985,16 @@ footer p {
 
 .contact-section {
     padding: 80px 0;
-    background-color: #f4f4f4; /* خلفية مختلفة قليلاً لتمييز القسم */
+    background-color: #f4f4f4; 
 }
 
 .contact-grid-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* العمود الثاني (الفورم) أعرض قليلاً */
+    grid-template-columns: 1fr 1.2fr; 
     gap: 50px;
     align-items: start;
 }
 
-/* --- 1. تنسيق صندوق المعلومات --- */
 .contact-info-box h3 {
     color: var(--brand-purple);
     font-size: 1.8em;
@@ -1067,7 +1019,7 @@ footer p {
 }
 
 .info-item:hover {
-    transform: translateX(-5px); /* حركة بسيطة لليسار عند المرور */
+    transform: translateX(-5px); 
 }
 
 .icon-box {
@@ -1080,7 +1032,7 @@ footer p {
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
-    flex-shrink: 0; /* منع انكماش الأيقونة */
+    flex-shrink: 0;
 }
 
 .text-box span {
@@ -1102,7 +1054,6 @@ footer p {
     color: var(--brand-purple);
 }
 
-/* --- 2. تنسيق صندوق الفورم --- */
 .contact-form-box {
     background: #fff;
     padding: 40px;
@@ -1140,7 +1091,7 @@ footer p {
     font-size: 1em;
     background-color: #fafafa;
     transition: border-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box; /* مهم جداً لعدم خروج العنصر عن الإطار */
+    box-sizing: border-box; 
 }
 
 .input-group input:focus,
@@ -1164,19 +1115,17 @@ footer p {
 /* --- Responsive (Mobile) --- */
 @media (max-width: 768px) {
     .contact-grid-wrapper {
-        grid-template-columns: 1fr; /* عمود واحد */
+        grid-template-columns: 1fr; 
         gap: 40px;
     }
     
     .contact-form-box {
-        padding: 25px; /* تقليل الحواف الداخلية للموبايل */
-        order: -1; /* (اختياري) إذا كنت تريد الفورم يظهر فوق المعلومات في الموبايل */
+        padding: 25px; 
+        order: -1; 
     }
 }
-/* تنسيق قسم الصور التثقيفية */
 .info-grid {
     display: grid;
-    /* عرض الصور بجانب بعض، وبحد أدنى للعرض لضمان عدم صغر الصورة جداً */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     justify-content: center;
@@ -1191,12 +1140,12 @@ footer p {
 }
 
 .info-card:hover {
-    transform: translateY(-10px); /* حركة رفع عند المرور */
+    transform: translateY(-10px); 
 }
 
 .info-card img {
     width: 100%;
-    height: auto; /* مهم جداً: يجعل الصورة بطولها الطبيعي لتقرأ الكلام */
+    height: auto; 
     display: block;
 }
 
@@ -1257,7 +1206,7 @@ footer p {
 .treatment-features {
     list-style: none;
     padding: 0;
-    text-align: right; /* المحاذاة لليمين للقوائم */
+    text-align: right; 
 }
 
 .treatment-features li {
@@ -1267,7 +1216,7 @@ footer p {
 }
 
 .treatment-features li i {
-    color: #25d366; /* لون علامة الصح أخضر */
+    color: #25d366; 
     margin-left: 10px;
 }
 
@@ -1293,7 +1242,7 @@ footer p {
     align-items: center;
     font-weight: bold;
     color: var(--brand-purple);
-    list-style: none; /* إخفاء السهم الافتراضي */
+    list-style: none; 
     background-color: #fff;
     transition: background-color 0.3s;
 }
@@ -1303,7 +1252,7 @@ footer p {
 }
 
 .guide-item summary::-webkit-details-marker {
-    display: none; /* إخفاء السهم في متصفحات كروم */
+    display: none; 
 }
 
 .guide-title {
@@ -1319,7 +1268,7 @@ footer p {
 }
 
 .guide-item[open] summary .arrow {
-    transform: rotate(180deg); /* تدوير السهم عند الفتح */
+    transform: rotate(180deg); 
 }
 
 .arrow {
